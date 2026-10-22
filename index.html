@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>新简约冰淇淋蛋糕大师课 · 乐逢 × Luca Bernardini</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7F2EA;
+  --paper:#FCFAF6;
+  --ink:#211D18;
+  --muted:#8C8175;
+  --line:#E3D9CA;
+  --clay:#B5532A;
+  --clay-deep:#8F3F1E;
+  --gold:#B08D57;
+  --shadow:0 18px 50px -28px rgba(33,29,24,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Noto Sans SC",-apple-system,"PingFang SC",sans-serif;
+  font-weight:300;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.wrap{max-width:520px;margin:0 auto;padding:0 24px}
+.serif{font-family:"Noto Serif SC",serif}
+.latin{font-family:"Cormorant Garamond",serif}
+.eyebrow{
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--clay);font-weight:500;
+}
+.label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,242,234,.86);backdrop-filter:saturate(140%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{max-width:520px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;flex-direction:column;line-height:1.1}
+.brand b{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:17px;letter-spacing:.04em}
+.brand span{font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
+.btn{
+  display:inline-block;background:var(--clay);color:#fff;border:0;
+  font-family:"Noto Sans SC";font-size:13px;font-weight:500;letter-spacing:.06em;
+  padding:9px 20px;border-radius:30px;cursor:pointer;text-decoration:none;
+  transition:background .25s,transform .25s;
+}
+.btn:hover{background:var(--clay-deep)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.block{display:block;width:100%;text-align:center;padding:15px;border-radius:14px;font-size:15px}
+
+/* HERO */
+.hero{padding:54px 0 40px}
+.hero .eyebrow{margin-bottom:18px}
+.hero h1{
+  font-family:"Noto Serif SC",serif;font-weight:600;
+  font-size:38px;line-height:1.22;letter-spacing:-.01em;margin-bottom:6px;
+}
+.hero h1 .en{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:22px;color:var(--clay);margin-top:10px;letter-spacing:.01em}
+.hero .lede{margin-top:22px;font-size:15px;color:#4a4339;max-width:38ch}
+.meta-row{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-align:center;flex:1;min-width:84px}
+.chip b{font-family:"Noto Serif SC",serif;font-size:19px;font-weight:600;display:block;line-height:1.1}
+.chip span{font-size:10px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.byline{display:flex;align-items:center;gap:12px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#d9c3a5,#b5532a);display:flex;align-items:center;justify-content:center;color:#fff;font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:600;flex:none}
+.byline .who b{font-weight:500;font-size:14px}
+.byline .who span{display:block;font-size:12px;color:var(--muted)}
+.hero-img{margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.hero-img img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover}
+
+/* SECTION */
+section{padding:46px 0}
+.sec-head{margin-bottom:26px}
+.sec-head h2{font-family:"Noto Serif SC",serif;font-weight:600;font-size:25px;line-height:1.3;margin:10px 0 0}
+.sec-head p{margin-top:12px;font-size:14px;color:var(--muted);max-width:42ch}
+.section-index{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--gold);letter-spacing:.2em}
+
+/* PHOTO PLACEHOLDER */
+.ph{position:relative;background:repeating-linear-gradient(45deg,#efe7d8,#efe7d8 12px,#e9dfcc 12px,#e9dfcc 24px);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;letter-spacing:.1em;overflow:hidden}
+.ph::after{content:attr(data-label);position:relative}
+.ph.tall{aspect-ratio:4/5}
+.ph.wide{aspect-ratio:16/9}
+.ph.round{border-radius:14px}
+
+/* INSTRUCTOR */
+.instructor{display:grid;grid-template-columns:1fr;gap:22px}
+.instructor-photo{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.instructor-photo img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.bio p{font-size:14px;color:#3f382f;margin-bottom:14px}
+.creds{list-style:none;margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+.creds li{font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+.creds li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--clay);margin-top:9px;flex:none}
+
+/* VALUE */
+.value p{font-size:15px;color:#3f382f;margin-bottom:16px}
+.value .pull{font-family:"Noto Serif SC",serif;font-size:20px;font-weight:500;line-height:1.55;color:var(--ink);border-left:2px solid var(--clay);padding-left:18px;margin:24px 0}
+.atmo{margin-top:24px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.atmo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+
+/* RECIPES */
+.recipes{display:flex;flex-direction:column;gap:12px}
+.recipe{border:1px solid var(--line);border-radius:14px;background:var(--paper);overflow:hidden;transition:border-color .25s}
+.recipe.open{border-color:var(--clay)}
+.recipe-head{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none}
+.recipe-no{font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--clay);font-weight:600;flex:none;width:30px}
+.recipe-name{flex:1}
+.recipe-name b{font-family:"Noto Serif SC",serif;font-weight:600;font-size:16px;display:block}
+.recipe-name span{font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.recipe-toggle{flex:none;color:var(--muted);font-size:20px;transition:transform .3s;line-height:1}
+.recipe.open .recipe-toggle{transform:rotate(45deg);color:var(--clay)}
+.recipe-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.recipe.open .recipe-body{max-height:520px}
+.recipe-body-in{padding:0 18px 18px 62px}
+.recipe-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin-bottom:12px;display:block}
+.recipe-body-in ul{list-style:none}
+.recipe-body-in li{font-size:13px;color:#4a4339;padding:5px 0 5px 16px;position:relative}
+.recipe-body-in li::before{content:"";position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+/* THEORY */
+.theory{display:grid;grid-template-columns:1fr;gap:0}
+.theory-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.theory-item:first-child{border-top:1px solid var(--line)}
+.theory-no{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--line);font-weight:600;flex:none;width:34px;line-height:1}
+.theory-item h4{font-family:"Noto Serif SC",serif;font-weight:600;font-size:15px;margin-bottom:4px}
+.theory-item p{font-size:13px;color:var(--muted)}
+
+/* PRICING */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.plan{border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:18px 12px;text-align:center;display:flex;flex-direction:column;cursor:pointer;transition:border-color .2s,transform .2s}
+.plan.featured{border:1.5px solid var(--clay);background:#fff7f1}
+.plan.sel{border-color:var(--clay);box-shadow:0 0 0 3px rgba(181,83,42,.15)}
+.plan .tag{font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.plan.featured .tag{color:var(--clay)}
+.plan .price{font-family:"Noto Serif SC",serif;font-weight:700;font-size:26px;margin:8px 0 2px;color:var(--ink)}
+.plan .price small{font-size:12px;font-weight:400;color:var(--muted)}
+.plan .who{font-size:11px;color:var(--muted);margin-top:auto;padding-top:10px}
+.plan .pick{font-size:11px;letter-spacing:.1em;color:var(--clay);margin-top:8px;font-weight:500;opacity:0;transition:opacity .2s}
+.plan.sel .pick{opacity:1}
+
+/* SCHEDULE */
+.sched{border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:22px}
+.sched .row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px dashed var(--line)}
+.sched .row:last-child{border-bottom:0}
+.sched .row .k{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.sched .row .v{font-family:"Noto Serif SC",serif;font-weight:600;font-size:16px;text-align:right}
+
+/* TRUST */
+.trust{text-align:center}
+.trust .big{font-family:"Noto Serif SC",serif;font-weight:700;font-size:46px;color:var(--clay);line-height:1}
+.trust .big small{font-size:18px;font-weight:400}
+.trust p{font-size:13px;color:var(--muted);margin-top:8px}
+.trust-people{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0 12px}
+.trust-people figure{margin:0}
+.trust-people img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block}
+.trust-people figcaption{font-size:11px;color:var(--muted);margin-top:8px;letter-spacing:.04em;text-align:left}
+.trust-wide{border-radius:14px;overflow:hidden;border:1px solid var(--line);margin-bottom:8px}
+.trust-wide img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.quotes{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.quote{border-left:2px solid var(--gold);padding:4px 0 4px 16px;font-size:14px;color:#3f382f}
+.quote b{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:4px}
+
+/* SPONSORS */
+.sponsors{display:flex;gap:14px;justify-content:center;align-items:flex-start;flex-wrap:wrap;margin-top:8px}
+.sponsor{flex:1;min-width:140px;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;background:var(--paper)}
+.sponsor .ph{aspect-ratio:3/2;margin-bottom:10px;border-radius:8px}
+.sponsor-logo{aspect-ratio:3/2;background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sponsor-logo img{width:100%;height:100%;object-fit:contain}
+.sponsor-logo.silikomart{aspect-ratio:3/4}
+.sponsor-logo.silikomart img{object-fit:contain;object-position:center}
+.sponsor b{font-size:13px;font-weight:500;display:block}
+.sponsor span{font-size:11px;color:var(--muted)}
+
+/* FORM */
+.form-wrap{border:1px solid var(--line);border-radius:18px;background:var(--paper);padding:26px 22px;box-shadow:var(--shadow)}
+.form-wrap h3{font-family:"Noto Serif SC",serif;font-weight:600;font-size:21px;margin-bottom:4px}
+.form-wrap .sub{font-size:13px;color:var(--muted);margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;letter-spacing:.06em;color:var(--muted);margin-bottom:7px;font-weight:400}
+.field input,.field textarea,.field select{
+  width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:13px 14px;font-family:"Noto Sans SC";font-size:14px;color:var(--ink);
+  transition:border-color .2s;outline:none;
+}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--clay)}
+.field textarea{resize:vertical;min-height:70px}
+.plans-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.plans-pick label{
+  border:1px solid var(--line);border-radius:10px;padding:11px 6px;text-align:center;
+  font-size:12px;cursor:pointer;background:#fff;transition:border-color .2s,background .2s;
+}
+.plans-pick input{position:absolute;opacity:0;pointer-events:none}
+.plans-pick label .pp{font-family:"Noto Serif SC",serif;font-weight:600;font-size:15px;display:block}
+.plans-pick label .pt{font-size:10px;color:var(--muted)}
+.plans-pick input:checked + .pp{color:var(--clay)}
+.plans-pick label:has(input:checked){border-color:var(--clay);background:#fff7f1}
+.err{color:#b3261e;font-size:12px;margin-top:6px;display:none}
+.field.invalid .err{display:block}
+.field.invalid input{border-color:#b3261e}
+.success{display:none;text-align:center;padding:30px 10px}
+.success .ok{width:64px;height:64px;border-radius:50%;background:var(--clay);color:#fff;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.success h3{font-family:"Noto Serif SC",serif;font-weight:600;font-size:22px;margin-bottom:10px}
+.success p{font-size:14px;color:var(--muted);line-height:1.7}
+.success .summary{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin:18px 0;text-align:left;font-size:13px}
+.success .summary div{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed var(--line)}
+.success .summary div:last-child{border-bottom:0}
+.success .summary b{font-weight:500}
+.qr-alt{margin-top:20px;padding-top:20px;border-top:1px dashed var(--line);text-align:center}
+.qr-alt img{width:150px;border:1px solid var(--line);border-radius:10px;padding:6px;background:#fff}
+.qr-alt p{font-size:11px;color:var(--muted);margin-top:8px}
+
+/* FOOTER + CTA BAR */
+.foot{padding:40px 0 130px;text-align:center;border-top:1px solid var(--line)}
+.foot .brand b{font-family:"Cormorant Garamond",serif;font-size:24px}
+.foot p{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.8}
+.cta-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:rgba(252,250,246,.92);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);padding:12px 24px calc(12px + env(safe-area-inset-bottom));
+}
+.cta-bar-in{max-width:520px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.cta-bar .price{font-family:"Noto Serif SC",serif;font-weight:700;font-size:18px}
+.cta-bar .price small{font-size:11px;font-weight:400;color:var(--muted);display:block;letter-spacing:.04em}
+.cta-bar .btn{margin-left:auto;padding:12px 26px}
+
+@media(min-width:560px){
+  .hero h1{font-size:44px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <div class="brand">
+      <b>L'ARÔME</b>
+      <span>乐逢法国厨艺学院</span>
+    </div>
+    <a href="#signup" class="btn">立即报名</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero wrap">
+  <div class="eyebrow">Masterclass · 大师课</div>
+  <h1 class="serif">新简约<br>冰淇淋蛋糕<span class="en">Gelato Cake, Reinvented</span></h1>
+  <p class="lede">用冰淇淋的技法做蛋糕，用蛋糕的审美做冰淇淋。Ins 顶流、金狮奖得主 Luca Bernardini，带来一套冰淇淋概念与技术的新打法。</p>
+  <div class="meta-row">
+    <div class="chip"><b>2天</b><span>14 学时</span></div>
+    <div class="chip"><b>8款</b><span>配方</span></div>
+    <div class="chip"><b>14人</b><span>小班</span></div>
+    <div class="chip"><b>11.11</b><span>开课</span></div>
+  </div>
+  <div class="byline">
+    <div class="avatar">LB</div>
+    <div class="who">
+      <b>Luca Bernardini</b>
+      <span>2023「Leone d'oro」金狮奖得主 · Silikomart 品牌大使</span>
+    </div>
+  </div>
+  <div class="hero-img"><img src="assets/img_29.jpg" alt="Luca 代表作 · 半冷冻甜点" loading="lazy"></div>
+</header>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- INSTRUCTOR -->
+<section class="wrap" id="instructor">
+  <div class="sec-head">
+    <div class="section-index">01 — The Chef</div>
+    <h2 class="serif">讲师 · Luca Bernardini</h2>
+  </div>
+  <div class="instructor">
+    <div class="instructor-photo"><img src="assets/img_37.jpg" alt="Luca Bernardini 与 Hangar78 团队" loading="lazy"></div>
+    <div class="bio">
+      <p>Luca Bernardini 是专注于手工冰淇淋（Gelato）、烘焙甜点与巧克力制作的意大利专业大师。25 年来，他深耕于这些领域之间融会贯通，其中对意式冷冻甜点（Semifreddo）的研究与创作，更处于其事业的核心位置。</p>
+      <p>他的理念巧妙 bridging 了传统冰淇淋与现代烘焙甜点的界限，通过不断探索全新的风味组合、口感层次与外观形态，拓宽了甜品的边界。</p>
+      <ul class="creds">
+        <li>Hangar78 高级创意学院讲师</li>
+        <li>2023「Leone d'oro」金狮奖得主（橄榄油潘妮托妮，满分 30/30）</li>
+        <li>Silikomart 品牌大使</li>
+        <li>Premio Gelato Giovani 全国青年冰淇淋大赛技术总监</li>
+        <li>托斯卡纳三家「Fuori dal Centro」gelateria 主理人</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- VALUE -->
+<section class="wrap value" id="value">
+  <div class="sec-head">
+    <div class="section-index">02 — Why it matters</div>
+    <h2 class="serif">为什么是冰淇淋蛋糕</h2>
+  </div>
+  <p>从世界范围来看，冰淇淋蛋糕必将成为 Gelato 商业的重要组成。它利润率高，方便计划性生产，易于切入生日、纪念日、聚会等消费场景。</p>
+  <div class="pull serif">客单价远超日常单品，还能打破季节限制——尤其是独特口味、有设计感的款式，是构建品牌差异化的有效手段。</div>
+  <p>做好产品，审美和实现审美的能力是第一任务；然后是配方，是对冷冻结构、抗融设计、风味平衡和美学呈现的系统理解。Chef 将在这一课中，完整分享以上。</p>
+  <div class="atmo"><img src="assets/img_20.jpg" alt="Luca 代表作 · 水果冰淇淋" loading="lazy"></div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- RECIPES -->
+<section class="wrap" id="recipes">
+  <div class="sec-head">
+    <div class="section-index">03 — The Repertoire</div>
+    <h2 class="serif">课程配方 · 8 款</h2>
+    <p>每一款都带有「可讲述的故事」——将地域性食材转化为冰淇淋蛋糕的风味层次。点击展开查看组成。</p>
+  </div>
+  <div class="recipes" id="recipeList"></div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- THEORY -->
+<section class="wrap" id="theory">
+  <div class="sec-head">
+    <div class="section-index">04 — The Method</div>
+    <h2 class="serif">核心理论</h2>
+    <p>这不是一堂只给配方的课，而是建立完整技术认知、打开创意边界的大师之旅。</p>
+  </div>
+  <div class="theory" id="theoryList"></div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- PRICING -->
+<section class="wrap" id="pricing">
+  <div class="sec-head">
+    <div class="section-index">05 — Tuition</div>
+    <h2 class="serif">价格 · 三档</h2>
+    <p>感谢 VALMAR 与 Silikomart，在国内即可以便宜的价格上到他的课。点选一档，自动带入报名表。</p>
+  </div>
+  <div class="pricing" id="pricingList"></div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- SCHEDULE -->
+<section class="wrap" id="schedule">
+  <div class="sec-head">
+    <div class="section-index">06 — Schedule</div>
+    <h2 class="serif">时间安排</h2>
+  </div>
+  <div class="sched">
+    <div class="row"><span class="k">日期</span><span class="v">11.11 – 11.12</span></div>
+    <div class="row"><span class="k">学时</span><span class="v">2 天 · 14 学时</span></div>
+    <div class="row"><span class="k">每日</span><span class="v">9:30 – 17:30</span></div>
+    <div class="row"><span class="k">午休</span><span class="v">1 小时</span></div>
+    <div class="row"><span class="k">班级</span><span class="v">14 人小班 · 分组实操</span></div>
+    <div class="row"><span class="k">基础</span><span class="v">有厨房经验即可</span></div>
+    <div class="row"><span class="k">提供</span><span class="v">配方·食材·培训·厨师服</span></div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- TRUST -->
+<section class="wrap trust" id="trust">
+  <div class="sec-head">
+    <div class="section-index">07 — The School</div>
+    <h2 class="serif">关于乐逢</h2>
+  </div>
+  <div class="big serif">12700<small>+</small></div>
+  <p>12 年间累计培养的专业学员</p>
+  <div class="trust-people">
+    <figure><img src="assets/img_02.jpg" alt="名誉校长 MOF Christian Vabret" loading="lazy"><figcaption>名誉校长 · MOF Christian Vabret（面包世界杯创始人）</figcaption></figure>
+    <figure><img src="assets/img_03.jpg" alt="创始人 刘喜民「喜大厨」" loading="lazy"><figcaption>创始人 · 刘喜民「喜大厨」· 保罗·博古斯毕业</figcaption></figure>
+  </div>
+  <div class="trust-wide"><img src="assets/img_10.jpg" alt="乐逢教学团队" loading="lazy"></div>
+  <div class="quotes">
+    <div class="quote">2017 年被财新网称为「国内最具美誉度的厨艺学校」。<b>—— 财新网</b></div>
+    <div class="quote">名誉校长 MOF Christian Vabret（面包 MOF 大赛主席）；创始人刘喜民，「喜大厨」，毕业于 Institut Paul Bocuse 保罗·博古斯。<b>—— 乐逢</b></div>
+    <div class="quote">「学员的成功就是学校的成功。」<b>—— 乐逢办学理念</b></div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- SPONSORS -->
+<section class="wrap" id="sponsors">
+  <div class="sec-head">
+    <div class="section-index">08 — Partners</div>
+    <h2 class="serif">课程赞助</h2>
+  </div>
+  <div class="sponsors">
+    <div class="sponsor">
+      <div class="sponsor-logo"><img src="assets/img_04.png" alt="VALMAR" loading="lazy"></div>
+      <b>VALMAR Global</b>
+      <span>斯洛文尼亚高端冰淇淋设备</span>
+    </div>
+    <div class="sponsor">
+      <div class="sponsor-logo silikomart"><img src="assets/img_30.jpg" alt="Silikomart" loading="lazy"></div>
+      <b>Silikomart</b>
+      <span>意大利铂金硅胶模具</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule"></div>
+
+<!-- SIGNUP -->
+<section class="wrap" id="signup">
+  <div class="sec-head">
+    <div class="section-index">09 — Enroll</div>
+    <h2 class="serif">填写报名表</h2>
+  </div>
+  <div class="form-wrap">
+    <form id="signupForm" novalidate>
+      <h3 class="serif">报名 · 新简约冰淇淋蛋糕大师课</h3>
+      <p class="sub">提交后小乐老师将于 1 个工作日内与你联系确认席位。</p>
+
+      <div class="field" id="f-name">
+        <label>姓名 / 称呼 *</label>
+        <input type="text" name="name" placeholder="如：王女士" autocomplete="name">
+        <div class="err">请填写你的姓名</div>
+      </div>
+
+      <div class="field" id="f-phone">
+        <label>手机号 *</label>
+        <input type="tel" name="phone" placeholder="11 位手机号" inputmode="numeric" maxlength="11" autocomplete="tel">
+        <div class="err">请填写有效的 11 位手机号</div>
+      </div>
+
+      <div class="field">
+        <label>微信号（选填）</label>
+        <input type="text" name="wechat" placeholder="方便老师添加你">
+      </div>
+
+      <div class="field">
+        <label>选择优惠档位 *</label>
+        <div class="plans-pick" id="planPick">
+          <label><input type="radio" name="plan" value="原价 5280 元"><span class="pp">5280</span><span class="pt">原价</span></label>
+          <label><input type="radio" name="plan" value="老学员 4080 元" checked><span class="pp">4080</span><span class="pt">老学员</span></label>
+          <label><input type="radio" name="plan" value="3人同行 3880 元"><span class="pp">3880</span><span class="pt">3人同行</span></label>
+        </div>
+        <div class="err" id="planErr">请选择一档</div>
+      </div>
+
+      <div class="field">
+        <label>备注（选填）</label>
+        <textarea name="note" placeholder="如：同行人数、饮食禁忌、想重点学的内容"></textarea>
+      </div>
+
+      <button type="submit" class="btn block">提交报名 →</button>
+      <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:12px;line-height:1.6">
+        提交即表示同意乐逢与你联系。咨询：小乐老师 15618725081（周一至周五 9:00–18:00）
+      </p>
+    </form>
+
+    <div class="qr-alt">
+      <img src="assets/img_19.jpg" alt="乐逢报名二维码" loading="lazy">
+      <p>微信扫一扫，也可直接进入报名表 · 小乐老师 15618725081</p>
+    </div>
+
+    <div class="success" id="successPanel">
+      <div class="ok">✓</div>
+      <h3 class="serif">报名已提交</h3>
+      <p>小乐老师会尽快与你联系，确认席位与付款方式。</p>
+      <div class="summary" id="successSummary"></div>
+      <p style="font-size:12px">如有疑问，可直联小乐老师 15618725081。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot wrap">
+  <div class="brand"><b class="serif">L'ARÔME</b></div>
+  <p>乐逢法国厨艺学院 · L'arôme Institut Culinaire Français<br>课程报名 · 小乐老师 15618725081<br>周一至周五 9:00 – 18:00</p>
+</footer>
+
+<!-- CTA BAR -->
+<div class="cta-bar">
+  <div class="cta-bar-in">
+    <div class="price">¥3880<small>起 · 3人同行</small></div>
+    <a href="#signup" class="btn">立即报名</a>
+  </div>
+</div>
+
+<script>
+/* ---------- DATA ---------- */
+const recipes=[
+  {no:1,zh:"开心果 & 柚子",en:"Pistacchio e yuzu",img:"assets/img_31.jpg",parts:["开心果冰淇淋","开心果蛋糕底 Biscuit","脆皮克里米诺 Cremino","柚子凝胶"]},
+  {no:2,zh:"提拉米苏",en:"Tiramisù",img:"assets/img_18.jpg",parts:["马斯卡彭帕菲 Parfait","咖啡","可可碎","手指饼干 Savoiardo"]},
+  {no:3,zh:"榛子 & 太妃焦糖",en:"Nocciola e caramello",img:"assets/img_34.jpg",parts:["蛋糕底 Biscuit","榛子冰淇淋","太妃焦糖","味噌冰霜慕斯"]},
+  {no:4,zh:"荔枝 & 香蕉 & 山楂",en:"Litchi, banana e biancospino",img:"assets/img_28.jpg",parts:["荔枝慕斯","香蕉冰淇淋","山楂凝胶","杏仁蛋糕底 Biscuit"]},
+  {no:5,zh:"红茶 & 可可",en:"Tè nero e cacao",img:"assets/img_38.jpg",parts:["红茶冰淇淋","红茶酥饼碎 Streusel","可可冰霜慕斯"]},
+  {no:6,zh:"浓黑巧 & 梨 & 香料布朗尼",en:"Fondente, pera e brownie speziato",img:"assets/img_39.jpg",parts:["可可帕菲 Parfait","香料洋梨雪芭 Sorbetto","葡萄干坚果布朗尼"]},
+  {no:7,zh:"树莓芝士蛋糕",en:"Cheesecake al lampone",img:"assets/img_21.jpg",parts:["奶油芝士帕菲 Parfait","树莓香醋凝胶","重组酥饼底 Frolla ricomposta"]},
+  {no:8,zh:"抹茶 & 茉莉 & 玫瑰 & 青柠",en:"Matcha, gelsomino, rosa e lime",img:"assets/img_20.jpg",parts:["抹茶慕斯与抹茶蛋糕底 Biscuit","茉莉花茶冰淇淋","玫瑰青柠凝胶"]}
+];
+const theory=[
+  {t:"主要原料的分析与作用",d:"鸡蛋、糖类、油脂及其在配方中的特性与表现。"},
+  {t:"蛋白与蛋黄的打发原理",d:"空气的包裹、引入与稳定。"},
+  {t:"半冷冻甜点的平衡",d:"糖、水、固形物与空气之间的比例关系。"},
+  {t:"糖类对结构的影响",d:"不同糖类对产品结构、甜度及零下温度质感的影响。"},
+  {t:"油脂的管理",d:"饱和与不饱和脂肪酸的关系、质地及结晶温度。"},
+  {t:"半冷冻甜点类型",d:"帕菲、冰冻慕斯、冰冻饼干及意式 Semifreddo 的区别与特征。"},
+  {t:"基础底料的研究",d:"意式蛋白霜、Pâte à bombe、香草卡仕达酱与打发鲜奶油。"},
+  {t:"膨胀率 Overrun",d:"空气引入的管理，获得完美结构、轻盈口感与抗融性。"},
+  {t:"增稠 / 稳定 / 胶凝剂",d:"明胶、果胶、琼脂等亲水胶体；甜品的解构与构建。"}
+];
+const plans=[
+  {tag:"原价",price:"5280",who:"新学员"},
+  {tag:"老学员",price:"4080",who:"乐逢老学员",featured:true},
+  {tag:"3人同行",price:"3880",who:"3人及以上"}
+];
+
+/* ---------- RENDER ---------- */
+const rl=document.getElementById('recipeList');
+recipes.forEach(r=>{
+  const el=document.createElement('div');
+  el.className='recipe';
+  el.innerHTML=`<div class="recipe-head">
+      <div class="recipe-no">${String(r.no).padStart(2,'0')}</div>
+      <div class="recipe-name"><b>${r.zh}</b><span>${r.en}</span></div>
+      <div class="recipe-toggle">+</div>
+    </div>
+    <div class="recipe-body"><div class="recipe-body-in">
+      <img class="recipe-img" src="${r.img}" alt="Luca 代表作 · ${r.zh}" loading="lazy">
+      <ul>${r.parts.map(p=>`<li>${p}</li>`).join('')}</ul>
+    </div></div>`;
+  el.querySelector('.recipe-head').addEventListener('click',()=>el.classList.toggle('open'));
+  rl.appendChild(el);
+});
+
+const tl=document.getElementById('theoryList');
+theory.forEach((t,i)=>{
+  const el=document.createElement('div');
+  el.className='theory-item';
+  el.innerHTML=`<div class="theory-no">${String(i+1).padStart(2,'0')}</div>
+    <div><h4>${t.t}</h4><p>${t.d}</p></div>`;
+  tl.appendChild(el);
+});
+
+const pl=document.getElementById('pricingList');
+plans.forEach(p=>{
+  const el=document.createElement('div');
+  el.className='plan'+(p.featured?' featured':'');
+  el.dataset.price=p.price;
+  el.dataset.tag=p.tag;
+  el.innerHTML=`<div class="tag">${p.tag}</div>
+    <div class="price">¥${p.price}<small> 起</small></div>
+    <div class="who">${p.who}</div>
+    <div class="pick">▸ 选这档</div>`;
+  el.addEventListener('click',()=>{
+    document.querySelectorAll('.plan').forEach(x=>x.classList.remove('sel'));
+    el.classList.add('sel');
+    const map={'原价':'原价 5280 元','老学员':'老学员 4080 元','3人同行':'3人同行 3880 元'};
+    const radio=document.querySelector(`input[name="plan"][value="${map[p.tag]}"]`);
+    if(radio)radio.checked=true;
+    document.getElementById('signup').scrollIntoView({behavior:'smooth'});
+  });
+  pl.appendChild(el);
+});
+
+/* ---------- FORM ---------- */
+const form=document.getElementById('signupForm');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  let ok=true;
+  const name=form.name.value.trim();
+  const phone=form.phone.value.trim();
+  const fName=document.getElementById('f-name');
+  const fPhone=document.getElementById('f-phone');
+  fName.classList.toggle('invalid',!name); if(!name)ok=false;
+  const phoneOk=/^1\d{10}$/.test(phone);
+  fPhone.classList.toggle('invalid',!phoneOk); if(!phoneOk)ok=false;
+  const plan=form.querySelector('input[name="plan"]:checked');
+  document.getElementById('planErr').style.display=plan?'none':'block';
+  if(!plan)ok=false;
+  if(!ok)return;
+
+  const data={
+    name,phone,
+    wechat:form.wechat.value.trim(),
+    plan:plan.value,
+    note:form.note.value.trim(),
+    course:"新简约冰淇淋蛋糕大师课",
+    submittedAt:new Date().toISOString()
+  };
+
+  /* 本地留存（演示用）。生产环境请替换为后端 / 表单服务，例如：
+     fetch('https://your-api.example.com/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+     或使用金数据 / 腾讯问卷的 webhook。 */
+  try{
+    const store=JSON.parse(localStorage.getItem('lefang_signups')||'[]');
+    store.push(data);
+    localStorage.setItem('lefang_signups',JSON.stringify(store));
+  }catch(_){}
+
+  const sum=document.getElementById('successSummary');
+  sum.innerHTML=`
+    <div><span>姓名</span><b>${data.name}</b></div>
+    <div><span>手机</span><b>${data.phone}</b></div>
+    ${data.wechat?`<div><span>微信</span><b>${data.wechat}</b></div>`:''}
+    <div><span>档位</span><b>${data.plan}</b></div>
+    <div><span>课程</span><b>新简约冰淇淋蛋糕大师课</b></div>`;
+  form.style.display='none';
+  document.getElementById('successPanel').style.display='block';
+  document.getElementById('signup').scrollIntoView({behavior:'smooth'});
+});
+
+/* 手机号只允许数字 */
+form.phone.addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,11);});
+</script>
+</body>
+</html>
